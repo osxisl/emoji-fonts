@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <style type="text/css">
-    /*html {font-family: "Apple Color Emoji", serif !important;}*/
     @font-face {
         font-family: 'Noto Color Emoji Eleven';
         src: url(https://raw.githubusercontent.com/osxisl/emoji-fonts/master/fonts/NotoColorEmojiEleven.ttf);
@@ -15,10 +14,9 @@
     canvas,img { /*background-color: green;*/ border: 1px solid black;}
     img {display: block;}
     a:active {color: black;}
-    ul { list-style: none; font-size: 240px; width:50%; float:left; text-align:center;}
-    .ul-1 {font-family: "Noto Color Emoji Eleven", serif !important; }
-    .ul-2 {font-family: "Noto Color Emoji 12", serif !important; }
-
+    ul { list-style: none; font-size: 240px; padding-inline-start:0;}
+    .ul-1 {font-family: "Noto Color Emoji Eleven", serif !important; width:500px; float:left; text-align:center;}
+    .ul-2 {font-family: "Noto Color Emoji 12", serif !important; width:500px; float:left; text-align:center;}
 </style>
 </head>
 <body>
@@ -31,12 +29,15 @@
         const ulOne = document.createElement('ul');
         ulOne.setAttribute("class", "ul-1");
         document.body.appendChild(ulOne);
+        let li = document.createElement('li');
+        li.innerHTML = emojis[emoji];
+        ulOne.appendChild(li);
 
         // emoji list
         for (emoji in emojis) {
             // console.log(emojis[emoji])
             let li = document.createElement('li');
-            li.innerHTML = emojis[emoji];
+            li.innerHTML = "Android 11";
             ulOne.appendChild(li);
         }
             
@@ -44,6 +45,9 @@
         const ulTwo = document.createElement('ul');
         ulTwo.setAttribute("class", "ul-2");
         document.body.appendChild(ulTwo);
+        let li = document.createElement('li');
+        li.innerHTML = "Android 12 Beta 1";
+        ulTwo.appendChild(li);
             
         // emoji list
         for (emoji in emojis) {
