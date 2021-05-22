@@ -17,6 +17,7 @@
     ul { list-style: none; font-size: 240px; padding-inline-start:0;}
     .ul-1 {font-family: "Noto Color Emoji Eleven", serif !important; width:500px; float:left; text-align:center;}
     .ul-2 {font-family: "Noto Color Emoji 12", serif !important; width:500px; float:left; text-align:center;}
+    .ul-head {font-family: Roboto !important; font-size: 18px;}
 </style>
 </head>
 <body>
@@ -30,7 +31,7 @@
         ulOne.setAttribute("class", "ul-1");
         document.body.appendChild(ulOne);
         let li11 = document.createElement('li');
-        li11.setAttribute("style", "font-size: 18px;");
+        li11.setAttribute("class", "ul-head");
         li11.innerHTML = "Android 11";
         ulOne.appendChild(li11);
 
@@ -47,7 +48,7 @@
         ulTwo.setAttribute("class", "ul-2");
         document.body.appendChild(ulTwo);
         let li12 = document.createElement('li');
-        li12.setAttribute("style", "font-size: 18px;");
+        li12.setAttribute("class", "ul-head");
         li12.innerHTML = "Android 12 Beta 1";
         ulTwo.appendChild(li12);
             
